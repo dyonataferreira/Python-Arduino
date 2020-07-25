@@ -23,6 +23,8 @@ pip install pyfirmata
 pip install tkinter
 ```
 
+## Circuit
+![](https://github.com/dyonataferreira/Python-Arduino/blob/master/Circuit.png)
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
