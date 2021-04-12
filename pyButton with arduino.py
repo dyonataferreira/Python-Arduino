@@ -1,6 +1,6 @@
 from pyfirmata import Arduino, util		# import lib to communicate with Arduino
-import time								# import lib to works with time
-from tkinter import *					# import lib to works a window	
+import time								# import lib to work with time
+from tkinter import *					# import lib to create our window
 
 board = Arduino('com13')				# change the COM to works fine in your project
 
@@ -15,7 +15,6 @@ aux2 = 0
 def Led(led):
     global aux1
     global aux2
-    
 
     if(led == 1):
     	# switch led 1
@@ -40,14 +39,14 @@ def Led(led):
             aux2=0
 
 # Create a Window
-janel = Tk()
-janel.title('testando viu')
-janel.geometry('500x500')
+my_screen = Tk()
+my_screen.title('2 buttons')
+my_screen.geometry('500x500')
 
 # Put 2 buttons in scream
-botao1 = Button(text = "led1", command = lambda: Led(1)).place(x = 50, y = 50)		# cria um botão
-botao2 = Button(text = "led2", command = lambda: Led(2)).place(x = 150, y = 50)		# cria um botão
+button1 = Button(text = "led1", command = lambda: Led(1)).place(x = 50, y = 50)
+button2 = Button(text = "led2", command = lambda: Led(2)).place(x = 150, y = 50)
 
 # Run our code
-janel.mainloop()
+my_screen.mainloop()
 
